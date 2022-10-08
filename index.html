@@ -15,9 +15,54 @@
   </head>
   <body>
     <div class="container">
-      <h1>Hi</h1>
-      <a href="" class="btn btn-primary">Click</a>
+      <div class="wrap">
+        <div class="row">
+          <div class="col-4">
+            <form id="search-city">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Type a city"
+                autofocus="on"
+                id="search-input-city"
+              />
+            </form>
+          </div>
+          <div class="col-4">
+            <button type="button" class="btn btn-primary">🔍</button>
+            <button type="button" class="btn btn-primary">📍</button>
+          </div>
+          <div class="col-4">October 8, Saturday, 12:25</div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h1>London</h1>
+            <div>Sunrise: 06:00 | <span>Sunset: 19:30</span></div>
+          </div>
+          <div class="col-4">
+            <h2>12°C | °F</h2>
+            <ul>
+              <li>Cloudy</li>
+              <li>Chance of rain: 25%</li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Cloudy"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+    <footer>
+      <a
+        href="https://github.com/la-livia/shecodes-weather-project.git"
+        target="_blank"
+        >Open-source code</a
+      >
+      by Livia Laczova
+    </footer>
     <script src="src/script.js"></script>
   </body>
 </html>
