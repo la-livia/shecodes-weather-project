@@ -31,15 +31,15 @@ li:first-letter {
   text-transform: capitalize;
 }
 .wrap-whole {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .wrap-board {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 800px;
+  margin: 30px auto 0;
   padding: 20px;
-  border: 1px solid rgb(172, 241, 213);
+  border: 2px solid rgb(172, 241, 213);
 }
 
 .font-icon {
@@ -64,4 +64,11 @@ li:first-letter {
   font-weight: 300;
   position: relative;
   top: -20px;
+}
+
+.active {
+  color: rgb(20, 89, 86);
+  cursor: default;
+  text-decoration: none;
+  font-weight: 500;
 }

@@ -24,7 +24,7 @@
         <div class="wrap-board">
           <div class="head-search-time mb-3">
             <div class="row align-items-baseline">
-              <div class="col-6">
+              <div class="col-sm-6">
                 <form id="search-form">
                   <div class="input-group">
                     <input
@@ -54,20 +54,23 @@
                   </div>
                 </form>
               </div>
-              <div class="col-6" id="time"></div>
+              <div class="col-sm-6" id="time"></div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-4">
+            <div class="col-sm-4">
               <h1 id="city"></h1>
               <div>Sunrise: <span id="sunrise"></span></div>
               <div>Sunset: <span id="sunset"></span></div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
               <div class="float-center strong">
                 <strong id="current-temperature"></strong>
-                <span class="units">°C | °F</span>
+                <span class="units"
+                  ><a href="#" id="celsius" class="active">°C</a> |
+                  <a href="#" id="fahrenheit">°F</a></span
+                >
                 <ul>
                   <li id="description"></li>
                   <li>
@@ -81,7 +84,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-sm-4">
               <div class="clearfix weather-temperature">
                 <img src="" alt="Cloudy" id="icon" class="float-center" />
               </div>
