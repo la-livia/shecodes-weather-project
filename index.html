@@ -10,6 +10,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Weather Project</title>
@@ -38,16 +39,17 @@
           </div>
           <div class="row">
             <div class="col-4">
-              <h1>London</h1>
+              <h1 id="city"></h1>
               <div>Sunrise: 06:00 | <span>Sunset: 19:30</span></div>
             </div>
             <div class="col-4">
               <div class="float-center strong">
-                <strong>12</strong>
+                <strong id="current-temperature"></strong>
                 <span class="units">°C | °F</span>
                 <ul>
-                  <li>Cloudy</li>
-                  <li>Chance of rain: 25%</li>
+                  <li id="description"></li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
                 </ul>
               </div>
             </div>

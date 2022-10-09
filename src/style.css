@@ -25,6 +25,7 @@ li {
   color: rgb(20, 89, 86);
   font-size: 18px;
   font-weight: 300;
+  text-transform: capitalize;
 }
 
 .wrap-whole {
