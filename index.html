@@ -20,27 +20,24 @@
       <div class="wrap-whole">
         <div class="wrap-board">
           <div class="row">
-            <div class="col-4">
+            <div class="col">
               <form id="search-city">
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Type a city"
+                  placeholder="Search for a city"
                   autofocus="on"
                   id="search-input-city"
                 />
               </form>
             </div>
-            <div class="col-4">
-              <button type="button" class="btn btn-primary">🔍</button>
-              <button type="button" class="btn btn-primary">📍</button>
-            </div>
-            <div class="col-4" id="time">October 8, Saturday, 12:25</div>
+            <div class="col" id="time"></div>
           </div>
           <div class="row">
             <div class="col-4">
               <h1 id="city"></h1>
-              <div>Sunrise: 06:00 | <span>Sunset: 19:30</span></div>
+              <div>Sunrise: <span id="sunrise"></span></div>
+              <div>Sunset: <span id="sunset"></span></div>
             </div>
             <div class="col-4">
               <div class="float-center strong">
@@ -55,11 +52,7 @@
             </div>
             <div class="col-4">
               <div class="clearfix weather-temperature">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                  alt="Cloudy"
-                  class="float-center"
-                />
+                <img src="" alt="Cloudy" id="icon" class="float-center" />
               </div>
             </div>
           </div>
