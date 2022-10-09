@@ -1,9 +1,25 @@
+html {
+  height: 100%;
+}
+
 body {
   background: radial-gradient(
     circle at 10% 20%,
     rgb(116, 203, 199) 0%,
     rgb(220, 246, 200) 90%
   );
+
+  background: linear-gradient(
+    109.6deg,
+    rgb(185, 212, 242) 11.2%,
+    rgb(244, 210, 226) 100.3%
+  );
+
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Noto Serif JP", serif;
 }
 
 h1 {
@@ -39,7 +55,7 @@ li:first-letter {
   max-width: 800px;
   margin: 30px auto 0;
   padding: 20px;
-  border: 2px solid rgb(172, 241, 213);
+  border: 2px solid rgb(244, 210, 226);
 }
 
 .font-icon {
@@ -50,6 +66,10 @@ li:first-letter {
   cursor: pointer;
   background-color: #fff;
   color: rgb(20, 89, 86);
+}
+
+.form-button:hover {
+  background-color: #fff;
 }
 .strong strong {
   color: rgb(20, 89, 86);
