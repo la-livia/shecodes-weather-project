@@ -12,27 +12,52 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
-
+    <script
+      src="https://kit.fontawesome.com/64df8480a1.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Weather Project</title>
   </head>
   <body>
     <div class="container">
       <div class="wrap-whole">
         <div class="wrap-board">
-          <div class="row">
-            <div class="col">
-              <form id="search-city">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search for a city"
-                  autofocus="on"
-                  id="search-input-city"
-                />
-              </form>
+          <div class="head-search-time mb-3">
+            <div class="row align-items-baseline">
+              <div class="col-6">
+                <form id="search-form">
+                  <div class="input-group">
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Search for a city"
+                      id="search-input-city"
+                      autocomplete="off"
+                    />
+
+                    <div class="input-group-append">
+                      <button
+                        class="btn form-button search-button"
+                        type="submit"
+                        id="search-button"
+                      >
+                        <i class="fas fa-search form-button"></i>
+                      </button>
+                      <button
+                        class="btn form-button location-button"
+                        type="submit"
+                        id="location-button"
+                      >
+                        <i class="fa fa-map-marker form-button"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-6" id="time"></div>
             </div>
-            <div class="col" id="time"></div>
           </div>
+
           <div class="row">
             <div class="col-4">
               <h1 id="city"></h1>
@@ -45,8 +70,14 @@
                 <span class="units">°C | °F</span>
                 <ul>
                   <li id="description"></li>
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind"></span> km/h</li>
+                  <li>
+                    <i class="fa-solid fa-droplet font-icon"></i>:
+                    <span id="humidity"></span>%
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-wind font-icon"></i>:
+                    <span id="wind"></span> km/h
+                  </li>
                 </ul>
               </div>
             </div>
