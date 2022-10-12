@@ -42,6 +42,7 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#current-temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -57,9 +58,6 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#icon");
   //let sunriseElement = document.querySelector("#sunrise");
   //let sunsetElement = document.querySelector("#sunset");
-
-  celsiusTemperature = response.data.main.temp;
-
   //sunriseElement.innerHTML = response.data.dt * 1000;
   //sunsetElement.innerHTML = response.data.dt * 1000;
   iconElement.setAttribute(

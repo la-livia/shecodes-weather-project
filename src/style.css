@@ -3,18 +3,11 @@ html {
 }
 
 body {
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(116, 203, 199) 0%,
-    rgb(220, 246, 200) 90%
-  );
-
   background: linear-gradient(
     109.6deg,
     rgb(185, 212, 242) 11.2%,
     rgb(244, 210, 226) 100.3%
   );
-
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
@@ -23,7 +16,8 @@ body {
 }
 
 h1 {
-  color: rgb(20, 89, 86);
+  color: rgb(99, 148, 203);
+  color: rgb(75, 124, 179);
   font-size: 44px;
   font-weight: 500;
   line-height: 1.5;
@@ -47,12 +41,12 @@ li:first-letter {
   text-transform: capitalize;
 }
 .wrap-whole {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .wrap-board {
-  max-width: 800px;
+  max-width: 600px;
   margin: 30px auto 0;
   padding: 20px;
   border: 2px solid rgb(244, 210, 226);
@@ -60,17 +54,15 @@ li:first-letter {
 
 .font-icon {
   color: rgb(20, 89, 86);
+  color: rgb(75, 124, 179);
 }
 
-.form-button {
+.icon-button {
   cursor: pointer;
   background-color: #fff;
   color: rgb(20, 89, 86);
 }
 
-.form-button:hover {
-  background-color: #fff;
-}
 .strong strong {
   color: rgb(20, 89, 86);
   font-size: 44px;
@@ -91,4 +83,17 @@ li:first-letter {
   cursor: default;
   text-decoration: none;
   font-weight: 500;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(59, 110, 169);
+  font-size: 14px;
+}
+
+.weather-forecast-date,
+.weather-forecast-temp-min {
+  color: rgb(59, 110, 169);
+  opacity: 0.5;
 }
