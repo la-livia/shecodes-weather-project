@@ -42,24 +42,24 @@ function formatDate(timestamp) {
 }
 
 function showTemperature(response) {
-  let temperatureElement = document.querySelector("#current-temperature");
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let timeElement = document.querySelector("#time");
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celsiusTemperature);
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#time").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
   let iconElement = document.querySelector("#icon");
   //let sunriseElement = document.querySelector("#sunrise");
   //let sunsetElement = document.querySelector("#sunset");
 
   celsiusTemperature = response.data.main.temp;
 
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  timeElement.innerHTML = formatDate(response.data.dt * 1000);
   //sunriseElement.innerHTML = response.data.dt * 1000;
   //sunsetElement.innerHTML = response.data.dt * 1000;
   iconElement.setAttribute(
@@ -80,6 +80,21 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search-input-city");
   search(cityInputElement.value);
 }
+
+function locateLocation(position) {
+  let apiKey = "1df0aac02b4f8a54bc1aee5bafade766";
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showTemperatureAtLocation(event) {
+  navigator.geolocation.getCurrentPosition(locateLocation);
+}
+
+let currentLocationButton = document.querySelector("#location-button");
+currentLocationButton.addEventListener("click", showTemperatureAtLocation);
 
 function showFahrenheit(event) {
   event.preventDefault();
