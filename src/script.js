@@ -41,8 +41,45 @@ function formatDate(timestamp) {
   return `${month} ${date}, ${day} ${hours}:${minutes}`;
 }
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = [
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="http://openweathermap.org/img/wn/50d@2x.png"
+                  alt=""
+                  width="42"
+                />
+                <div class="weather-forecast-temperature">
+                  <span class="weather-forecast-temp-max">18°</span>
+                  <span class="weather-forecast-temp-min">12°</span>
+                </div>
+              </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTemperature(response) {
   celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#current-temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#city").innerHTML = response.data.name;
@@ -56,6 +93,7 @@ function showTemperature(response) {
     response.data.dt * 1000
   );
   let iconElement = document.querySelector("#icon");
+
   //let sunriseElement = document.querySelector("#sunrise");
   //let sunsetElement = document.querySelector("#sunset");
   //sunriseElement.innerHTML = response.data.dt * 1000;
@@ -123,3 +161,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
 search("London");
+showForecast();
