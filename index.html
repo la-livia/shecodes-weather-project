@@ -25,88 +25,82 @@
     <title>Weather Project</title>
   </head>
   <body>
-    <div class="container">
-      <div class="wrap-whole">
-        <div class="wrap-board">
-          <div class="head-search-time mb-3">
-            <div class="row align-items-baseline">
-              <div class="col-sm-6">
-                <form id="search-form">
-                  <div class="input-group">
-                    <input
-                      type="search"
-                      class="form-control"
-                      placeholder="Search for a city"
-                      id="search-input-city"
-                      autocomplete="off"
-                    />
-                    <div class="input-group-append">
-                      <button
-                        class="btn form-button icon-button"
-                        type="submit"
-                        id="search-button"
-                      >
-                        <i class="fas fa-search"></i>
-                      </button>
-                      <button
-                        class="btn form-button icon-button"
-                        type="submit"
-                        id="location-button"
-                      >
-                        <i class="fa fa-map-marker"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="col-sm-6" id="time"></div>
-            </div>
+    <div class="container wrap-whole">
+      <div class="wrap-board">
+        <div class="date-and-time" id="time"></div>
+        <div class="row">
+          <div class="col-10">
+            <form id="search-form">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search for a city"
+                id="search-input-city"
+                autocomplete="off"
+              />
+            </form>
           </div>
-
-          <div class="row">
-            <div class="col-sm-4">
-              <h1 id="city"></h1>
-              <div>Sunrise: <span id="sunrise"></span></div>
-              <div>Sunset: <span id="sunset"></span></div>
-            </div>
-            <div class="col-sm-4">
-              <div class="float-center strong">
-                <strong id="current-temperature"></strong>
-                <span class="units"
-                  ><a href="#" id="celsius" class="active">°C</a> |
-                  <a href="#" id="fahrenheit">°F</a></span
-                >
-                <ul>
-                  <li id="description"></li>
-                  <li>
-                    <i class="fa-solid fa-droplet font-icon"></i>:
-                    <span id="humidity"></span>%
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-wind font-icon"></i>:
-                    <span id="wind"></span> km/h
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="Cloudy" id="icon" class="float-center" />
-              </div>
-            </div>
+          <div class="col-1">
+            <button
+              class="btn form-button icon-button"
+              type="button"
+              id="search-button"
+            >
+              <i class="fas fa-search"></i>
+            </button>
           </div>
-          <div class="weather-forecast" id="forecast"></div>
+          <div class="col-1">
+            <button
+              class="btn form-button icon-button"
+              type="button"
+              id="location-button"
+            >
+              <i class="fa fa-map-marker"></i>
+            </button>
+          </div>
         </div>
 
-        <footer>
-          <a
-            href="https://github.com/la-livia/shecodes-weather-project.git"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Lívia Laczová
-        </footer>
+        <div class="row">
+          <div class="col-6">
+            <h1 id="city"></h1>
+
+            <div class="clearfix weather-temperature">
+              <img src="" alt="Cloudy" id="icon" class="float-left" />
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="float-right strong">
+              <strong id="current-temperature"></strong>
+              <span class="units"
+                ><a href="#" id="celsius" class="active">°C</a> |
+                <a href="#" id="fahrenheit">°F</a></span
+              >
+              <ul>
+                <li id="description"></li>
+                <li>
+                  <i class="fa-solid fa-droplet font-icon"></i>:
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  <i class="fa-solid fa-wind font-icon"></i>:
+                  <span id="wind"></span> km/h
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
+
+      <footer>
+        <a
+          href="https://github.com/la-livia/shecodes-weather-project.git"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Lívia Laczová
+      </footer>
     </div>
 
     <script src="src/script.js"></script>

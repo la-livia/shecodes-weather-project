@@ -16,11 +16,8 @@ body {
 }
 
 h1 {
-  color: rgb(99, 148, 203);
-  color: rgb(75, 124, 179);
   font-size: 44px;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 ul {
@@ -32,7 +29,6 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: rgb(20, 89, 86);
   font-size: 18px;
   font-weight: 300;
 }
@@ -41,8 +37,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 .wrap-whole {
-  max-width: 600px;
   margin: 0 auto;
+  text-align: center;
+  color: rgb(59, 110, 169);
+  line-height: 1.5;
 }
 
 .wrap-board {
@@ -52,26 +50,18 @@ li:first-letter {
   border: 2px solid rgb(244, 210, 226);
 }
 
-.font-icon {
-  color: rgb(20, 89, 86);
-  color: rgb(75, 124, 179);
-}
-
 .icon-button {
   cursor: pointer;
   background-color: #fff;
-  color: rgb(20, 89, 86);
+  color: rgb(59, 110, 169);
 }
 
 .strong strong {
-  color: rgb(20, 89, 86);
   font-size: 44px;
   font-weight: 500;
-  line-height: 1.5;
 }
 
 .units {
-  color: rgb(20, 89, 86);
   font-size: 18px;
   font-weight: 300;
   position: relative;
@@ -79,7 +69,6 @@ li:first-letter {
 }
 
 .active {
-  color: rgb(20, 89, 86);
   cursor: default;
   text-decoration: none;
   font-weight: 500;
@@ -87,13 +76,10 @@ li:first-letter {
 
 .weather-forecast {
   margin-top: 20px;
-  text-align: center;
-  color: rgb(59, 110, 169);
   font-size: 14px;
 }
 
 .weather-forecast-date,
 .weather-forecast-temp-min {
-  color: rgb(59, 110, 169);
   opacity: 0.5;
 }

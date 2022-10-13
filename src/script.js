@@ -46,15 +46,7 @@ function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = [
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-  ];
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -113,7 +105,7 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function search(city) {
+function searchCity(city) {
   let apiKey = "1df0aac02b4f8a54bc1aee5bafade766";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
@@ -122,7 +114,7 @@ function search(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-input-city");
-  search(cityInputElement.value);
+  searchCity(cityInputElement.value);
 }
 
 function locateLocation(position) {
@@ -133,12 +125,12 @@ function locateLocation(position) {
   axios.get(apiUrl).then(showTemperature);
 }
 
-function showTemperatureAtLocation(event) {
+function searchLocation(event) {
   navigator.geolocation.getCurrentPosition(locateLocation);
 }
 
 let currentLocationButton = document.querySelector("#location-button");
-currentLocationButton.addEventListener("click", showTemperatureAtLocation);
+currentLocationButton.addEventListener("click", searchLocation);
 
 function showFahrenheit(event) {
   event.preventDefault();
@@ -168,4 +160,4 @@ fahrenheit.addEventListener("click", showFahrenheit);
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showCelsius);
 
-search("London");
+searchCity("London");
