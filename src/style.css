@@ -68,12 +68,6 @@ li:first-letter {
   top: -20px;
 }
 
-.active {
-  cursor: default;
-  text-decoration: none;
-  font-weight: 500;
-}
-
 .weather-forecast {
   margin-top: 20px;
   font-size: 14px;
