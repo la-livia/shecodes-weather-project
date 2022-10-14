@@ -28,29 +28,25 @@
     <div class="container wrap-whole">
       <div class="wrap-board">
         <div class="date-and-time" id="time"></div>
-        <div class="row">
-          <div class="col-10">
-            <form id="search-form">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="Search for a city"
-                id="search-input-city"
-                autocomplete="off"
-              />
-           
-          </div>
-          <div class="col-1">
-            <button
-              class="btn form-button icon-button"
-              type="submit"
-              id="search-button"
-            >
-              <i class="fas fa-search"></i>
-            </button>
-            
-          </div>
-          <div class="col-1">
+        <form id="search-form">
+          <div class="input-group">
+            <input
+              type="search"
+              class="form-control search-form-border"
+              placeholder="Search for a city"
+              id="search-input-city"
+              ariadescribedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn form-button icon-button"
+                type="submit"
+                id="search-button"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
             <button
               class="btn form-button icon-button"
               type="button"
@@ -59,8 +55,7 @@
               <i class="fa fa-map-marker"></i>
             </button>
           </div>
-        </div>
-         </form>
+        </form>
 
         <div class="row">
           <div class="col-6">

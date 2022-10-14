@@ -50,10 +50,17 @@ li:first-letter {
   border: 2px solid rgb(244, 210, 226);
 }
 
+.search-form-border {
+  border-radius: 0%;
+  border: 2px solid #b9d4f2;
+}
 .icon-button {
   cursor: pointer;
   background-color: #fff;
   color: rgb(59, 110, 169);
+  border-radius: 0%;
+  border: 2px solid #b9d4f2;
+  border: 2px solid rgb(244, 210, 226);
 }
 
 .strong strong {
@@ -70,7 +77,9 @@ li:first-letter {
 
 .weather-forecast {
   margin-top: 20px;
+  padding: 30px;
   font-size: 14px;
+  border: 2px solid #b9d4f2;
 }
 
 .weather-forecast-date,
