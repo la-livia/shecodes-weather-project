@@ -27,7 +27,7 @@
   <body>
     <div class="container wrap-whole">
       <div class="wrap-board">
-        <div class="date-and-time" id="time"></div>
+        <div id="time"></div>
         <form id="search-form">
           <div class="input-group">
             <input
@@ -35,6 +35,7 @@
               class="form-control search-form-border"
               placeholder="Search for a city"
               id="search-input-city"
+              autocomplete="off"
               ariadescribedby="basic-addon2"
             />
             <div class="input-group-append">
@@ -46,7 +47,6 @@
                 <i class="fas fa-search"></i>
               </button>
             </div>
-
             <button
               class="btn form-button icon-button"
               type="button"
@@ -61,27 +61,26 @@
           <div class="col-6">
             <h1 id="city"></h1>
 
+            <div id="description"></div>
             <div class="clearfix weather-temperature">
-              <img src="" alt="Cloudy" id="icon" class="float-left" />
+              <img src="" alt="Cloudy" id="icon" />
             </div>
           </div>
 
           <div class="col-6">
-            <div class="float-right strong">
-              <strong id="current-temperature"></strong>
-              <span class="units" id="celsius"> °C</span>
-              <ul>
-                <li id="description"></li>
-                <li>
-                  <i class="fa-solid fa-droplet font-icon"></i>:
-                  <span id="humidity"></span>%
-                </li>
-                <li>
-                  <i class="fa-solid fa-wind font-icon"></i>:
-                  <span id="wind"></span> km/h
-                </li>
-              </ul>
-            </div>
+            <span class="current-temp" id="current-temperature"></span>
+            <span class="celsius"> °C</span>
+
+            <ul>
+              <li>
+                <i class="fa-solid fa-droplet font-icon drop"></i>
+                <span id="humidity"></span>%
+              </li>
+              <li>
+                <i class="fa-solid fa-wind font-icon"></i>
+                <span id="wind"></span> km/h
+              </li>
+            </ul>
           </div>
         </div>
         <div class="weather-forecast" id="forecast"></div>

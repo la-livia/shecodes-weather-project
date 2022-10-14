@@ -18,11 +18,12 @@ body {
 h1 {
   font-size: 44px;
   font-weight: 500;
+  padding: 10px;
 }
 
 ul {
   margin: 0;
-  padding: 0;
+  padding: 30px;
 }
 
 li {
@@ -45,14 +46,18 @@ li:first-letter {
 
 .wrap-board {
   max-width: 600px;
-  margin: 30px auto 0;
+  margin: 30px auto 20px;
   padding: 20px;
   border: 2px solid rgb(244, 210, 226);
+  box-shadow: rgba(20, 182, 213, 0.2) 5px 5px 5px 0;
+  box-shadow: #d2d3eb 5px 5px 5px 0;
 }
 
 .search-form-border {
   border-radius: 0%;
   border: 2px solid #b9d4f2;
+  border: 2px solid #d2d3eb;
+  margin: 20px 0;
 }
 .icon-button {
   cursor: pointer;
@@ -61,25 +66,25 @@ li:first-letter {
   border-radius: 0%;
   border: 2px solid #b9d4f2;
   border: 2px solid rgb(244, 210, 226);
+  border: 2px solid #d2d3eb;
+  margin: 20px 0;
 }
 
-.strong strong {
+.current-temp {
   font-size: 44px;
   font-weight: 500;
 }
-
-.units {
-  font-size: 18px;
+.celsius {
+  font-size: 22px;
   font-weight: 300;
   position: relative;
-  top: -20px;
+  top: -15px;
 }
 
 .weather-forecast {
   margin-top: 20px;
-  padding: 30px;
+
   font-size: 14px;
-  border: 2px solid #b9d4f2;
 }
 
 .weather-forecast-date,
