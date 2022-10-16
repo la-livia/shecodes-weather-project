@@ -122,10 +122,13 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   getForecast(response.data.coord);
+  document.querySelector("#error").innerHTML = ``;
 }
 
 function error(response) {
-  alert(`No result found.`);
+  document.querySelector(
+    "#error"
+  ).innerHTML = `<i class="fa-sharp fa-solid fa-circle-exclamation"></i> City not found.`;
 }
 
 function searchCity(city) {

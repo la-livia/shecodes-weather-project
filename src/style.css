@@ -46,6 +46,10 @@ body {
   margin: 20px 0;
 }
 
+.error-message {
+  color: rgb(216, 91, 149);
+}
+
 h1,
 .current-temp {
   font-size: 48px;
