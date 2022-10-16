@@ -1,5 +1,5 @@
-function formatDate(timestamp) {
-  let now = new Date(timestamp);
+function formatDate() {
+  let now = new Date();
   let months = [
     "January",
     "February",
@@ -112,9 +112,7 @@ function showTemperature(response) {
     response.data.wind.speed
   );
 
-  document.querySelector("#time").innerHTML = formatDate(
-    response.data.dt * 1000
-  );
+  document.querySelector("#time").innerHTML = formatDate();
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
