@@ -101,10 +101,9 @@ function getForecast(coordinates) {
 }
 
 function showTemperature(response) {
-  celsiusTemperature = response.data.main.temp;
-
-  document.querySelector("#current-temperature").innerHTML =
-    Math.round(celsiusTemperature);
+  document.querySelector("#current-temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -117,11 +116,6 @@ function showTemperature(response) {
     response.data.dt * 1000
   );
   let iconElement = document.querySelector("#icon");
-
-  //let sunriseElement = document.querySelector("#sunrise");
-  //let sunsetElement = document.querySelector("#sunset");
-  //sunriseElement.innerHTML = response.data.dt * 1000;
-  //sunsetElement.innerHTML = response.data.dt * 1000;
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`

@@ -8,40 +8,19 @@ body {
     rgb(185, 212, 242) 11.2%,
     rgb(244, 210, 226) 100.3%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   height: 100%;
   margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: "Noto Serif JP", serif;
 }
 
-h1 {
-  font-size: 44px;
-  font-weight: 500;
-  padding: 10px;
-}
-
-ul {
-  margin: 0;
-  padding: 30px;
-}
-
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 300;
-}
-
-li:first-letter {
-  text-transform: capitalize;
-}
 .wrap-whole {
+  color: rgb(59, 110, 169);
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  line-height: 1.5;
   margin: 0 auto;
   text-align: center;
-  color: rgb(59, 110, 169);
-  line-height: 1.5;
 }
 
 .wrap-board {
@@ -49,42 +28,63 @@ li:first-letter {
   margin: 30px auto 20px;
   padding: 20px;
   border: 2px solid rgb(244, 210, 226);
-  box-shadow: rgba(20, 182, 213, 0.2) 5px 5px 5px 0;
   box-shadow: #d2d3eb 5px 5px 5px 0;
 }
 
 .search-form-border {
   border-radius: 0%;
-  border: 2px solid #b9d4f2;
-  border: 2px solid #d2d3eb;
-  margin: 20px 0;
-}
-.icon-button {
-  cursor: pointer;
-  background-color: #fff;
-  color: rgb(59, 110, 169);
-  border-radius: 0%;
-  border: 2px solid #b9d4f2;
-  border: 2px solid rgb(244, 210, 226);
   border: 2px solid #d2d3eb;
   margin: 20px 0;
 }
 
-.current-temp {
-  font-size: 44px;
-  font-weight: 500;
+.icon-button {
+  background-color: #fff;
+  border: 2px solid #d2d3eb;
+  border-radius: 0%;
+  color: rgb(59, 110, 169);
+  cursor: pointer;
+  margin: 20px 0;
 }
+
+h1,
+.current-temp {
+  font-size: 48px;
+  font-weight: 500;
+  padding: 20px;
+}
+
 .celsius {
   font-size: 22px;
   font-weight: 300;
   position: relative;
-  top: -15px;
+  top: -18px;
+  left: -18px;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.description {
+  opacity: 0.5;
+  position: relative;
+  top: -10px;
 }
 
 .weather-forecast {
-  margin-top: 20px;
-
-  font-size: 14px;
+  margin-top: 30px;
 }
 
 .weather-forecast-date,

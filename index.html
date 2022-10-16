@@ -25,75 +25,76 @@
     <title>Weather Project</title>
   </head>
   <body>
-    <div class="container wrap-whole">
-      <div class="wrap-board">
-        <div id="time"></div>
-        <form id="search-form">
-          <div class="input-group">
-            <input
-              type="search"
-              class="form-control search-form-border"
-              placeholder="Search for a city"
-              id="search-input-city"
-              autocomplete="off"
-              ariadescribedby="basic-addon2"
-            />
-            <div class="input-group-append">
+    <div class="container">
+      <div class="wrap-whole">
+        <div class="wrap-board">
+          <div id="time"></div>
+          <form id="search-form">
+            <div class="input-group">
+              <input
+                type="search"
+                class="form-control search-form-border"
+                placeholder="Search for a city"
+                id="search-input-city"
+                autocomplete="off"
+                ariadescribedby="basic-addon2"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn form-button icon-button"
+                  type="submit"
+                  id="search-button"
+                >
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
               <button
                 class="btn form-button icon-button"
-                type="submit"
-                id="search-button"
+                type="button"
+                id="location-button"
               >
-                <i class="fas fa-search"></i>
+                <i class="fa fa-map-marker"></i>
               </button>
             </div>
-            <button
-              class="btn form-button icon-button"
-              type="button"
-              id="location-button"
-            >
-              <i class="fa fa-map-marker"></i>
-            </button>
-          </div>
-        </form>
+          </form>
 
-        <div class="row">
-          <div class="col-6">
-            <h1 id="city"></h1>
+          <div class="row">
+            <div class="col-6">
+              <h1 id="city"></h1>
 
-            <div id="description"></div>
-            <div class="clearfix weather-temperature">
-              <img src="" alt="Cloudy" id="icon" />
+              <span class="current-temp" id="current-temperature"></span>
+              <span class="celsius"> °C</span>
+            </div>
+
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Cloudy" id="icon" />
+              </div>
+              <div class="description" id="description"></div>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-droplet font-icon"></i>
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  <i class="fa-solid fa-wind font-icon"></i>
+                  <span id="wind"></span> km/h
+                </li>
+              </ul>
             </div>
           </div>
-
-          <div class="col-6">
-            <span class="current-temp" id="current-temperature"></span>
-            <span class="celsius"> °C</span>
-
-            <ul>
-              <li>
-                <i class="fa-solid fa-droplet font-icon drop"></i>
-                <span id="humidity"></span>%
-              </li>
-              <li>
-                <i class="fa-solid fa-wind font-icon"></i>
-                <span id="wind"></span> km/h
-              </li>
-            </ul>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <div class="weather-forecast" id="forecast"></div>
-      </div>
 
-      <footer>
-        <a
-          href="https://github.com/la-livia/shecodes-weather-project.git"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Lívia Laczová
-      </footer>
+        <footer>
+          <a
+            href="https://github.com/la-livia/shecodes-weather-project.git"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Lívia Laczová
+        </footer>
+      </div>
     </div>
 
     <script src="src/script.js"></script>
